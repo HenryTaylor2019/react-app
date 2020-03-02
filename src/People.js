@@ -1,13 +1,20 @@
 import React from 'react';
 
-let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
 
-const People = () => (
+const People = ({ names }) => (
+    names ?
     <ul className="nameList">
-
-    { names.map((value, index) => (
-            <li classname="nameList" key={index}>{value}</li>))}
+        
+        { names.map((value, index) => (
+            <li classname="nameList" key={index}>
+                {value}
+            </li>
+        ))}
     </ul>
+
+    : "Nothing to see here"
+    // This is a ternary..... 
 );
+
 
 export default People;
