@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const People = ({ names }) => (
     names ?
     <ul className="nameList">

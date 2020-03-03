@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const Square = ({ color }) => (
    
     <div style={ {
@@ -16,6 +14,5 @@ const Square = ({ color }) => (
 Square.defaultProps = {
     color: 'blue'
 }
-
 
 export default Square;

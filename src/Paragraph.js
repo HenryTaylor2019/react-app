@@ -9,5 +9,4 @@ Paragraph.defaultProps = {
     children: "Hello, world"
 }
 
-
 export default Paragraph;

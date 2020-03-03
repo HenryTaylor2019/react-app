@@ -6,9 +6,7 @@ import './App.css';
   const App = () => (
 
     <Stuff square={true}/>
-
+    
   );
-
-
 
 export default App;
