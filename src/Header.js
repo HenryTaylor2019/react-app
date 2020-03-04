@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component }  from 'react';
 
-const Header = ({ children }) => (
-   
-    <h1>{ children }</h1>
-);
+class Header extends Component {
+ 
+    render() {
 
-Header.defaultProps = {
-    children: "H1 Placeholder"
-};
+        let { children } = this.props;
+
+        return (
+            <header> 
+                <h1 className="display-1">{children}</h1>
+            </header>
+        );
+    }
+}
 
 
 export default Header;
