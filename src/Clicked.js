@@ -23,9 +23,9 @@ class Clicked extends Component {
 
         return (
                   //   A ternary decides what text to render depending on the action taken 
-            <p onClick={ this.handleClick }>
+            <h2 onClick={ this.handleClick }>
                 {isClicked ? "Clicked" : "Not Clicked"} 
-            </p>
+            </h2>
 
         );
     }

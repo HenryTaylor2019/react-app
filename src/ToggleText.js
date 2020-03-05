@@ -19,13 +19,17 @@ class ToggleText extends Component { //declaring a class that extends component 
 
         return (
             <>
-            <button onClick={ this.handleClick }>
-                <p>Toggle</p>
+            <button 
+            class="btn btn-warning"
+            onClick={ this.handleClick }>
+            Toggle
             </button>
 
-            <p>
+            <h3 style={{
+                color: "orange"
+            }}>
             {clicked ? "Hello" : "World"} 
-            </p>
+            </h3>
             </>
         );
 

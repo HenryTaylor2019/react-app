@@ -22,11 +22,13 @@ class Square extends Component {
 
         return (
             <div
+            class="card"
                 onClick={ this.handleClick }
                 style={{
                     height: 200,
                     width: 200,
                     background: greenOrPink,
+                 
                 }}
             />
         );

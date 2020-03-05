@@ -26,6 +26,7 @@ class CatchMeIfYouCan extends Component {
 
         return (
             <>
+            <h2>Jumping Button</h2>
             <button style={{marginTop : position,}} onClick={this.handleClick}>
                 Jump
             </button>
