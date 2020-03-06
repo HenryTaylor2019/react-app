@@ -34,24 +34,26 @@ class List extends Component {
     render() {
         return (
             <React.Fragment>
-                <form onClick={ this.handleClick } className="form-group mt-4">
+                <div style={{textAlign: "center"}}>
+                    <form onClick={ this.handleClick } className="form-group mt-4">
 
-                    <input 
-                    placeholder="Add to List"
-                    className="form-control" 
-                    onChange={ this.handleChange } 
-                    value={ this.state.value } />
-                    <button className="btn btn-primary mt-4">Add</button>
+                        <input 
+                        placeholder="Add to List"
+                        className="form-control" 
+                        onChange={ this.handleChange } 
+                        value={ this.state.value } />
+                        <button className="btn btn-primary mt-4">Add</button>
 
-                </form>
+                    </form>
 
-                <ul className="list-group mt-4">
+                    <ul className="list-group mt-4">
 
-                    { this.state.items.map((item, i) => (
-                        <li className="list-group-item" key={ i }>{ item }</li>
+                        { this.state.items.map((item, i) => (
+                            <li  key={ i }>{ item }</li>
 
-                    )) }
-                </ul>
+                        )) }
+                    </ul>
+                </div>
             </React.Fragment>
         );
     }

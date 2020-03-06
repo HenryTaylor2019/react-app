@@ -26,10 +26,15 @@ class CatchMeIfYouCan extends Component {
 
         return (
             <>
-            <h2>Jumping Button</h2>
-            <button style={{marginTop : position,}} onClick={this.handleClick}>
-                Jump
-            </button>
+            <div style={{textAlign: "center"}}>
+                <h2>Jumping Button</h2>
+                <button 
+                style={{marginTop : position,}} 
+                onClick={this.handleClick}
+                className="btn btn-primary mt-4">
+                    Jump
+                </button>
+            </div>
             </>
         );
     }

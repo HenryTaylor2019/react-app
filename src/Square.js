@@ -5,7 +5,7 @@ class Square extends Component {
         super(props);
 
         this.state = { 
-            green: true, 
+            green: false, 
         };
         
         this.handleClick = this.handleClick.bind(this);
@@ -18,19 +18,27 @@ class Square extends Component {
     }
 
     render () {
-        let greenOrPink = this.state.green ? "green" : this.props.color;
+        let greenOrPink = this.state.green ? "green" : this.props.square;
 
         return (
-            <div
-            class="card"
-                onClick={ this.handleClick }
-                style={{
-                    height: 200,
-                    width: 200,
-                    background: greenOrPink,
-                 
-                }}
-            />
+            <>
+                <div className="nav justify-content-center">
+                
+                    
+                    <div
+                    class="card"
+                    onClick={ this.handleClick }
+                    style={{
+                            height: 500,
+                            width: 500,
+                            background: greenOrPink,
+                        
+                        }}
+                    />
+
+                </div>
+                
+            </>
         );
     }
 }

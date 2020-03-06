@@ -10,8 +10,13 @@ class People extends Component {
         let { names } = this.props
 
         return (
+            
             names ?
-            <ul class="list-group list-group-flush" onClick={ this.handleClick }>
+            <ul class="list-group list-group-flush" 
+                onClick={ this.handleClick }
+                style={{
+                    textAlign: "center"
+                }}>    
         
                 { names.map((value, index) => (
                     <li class="list-group-item" key={index}>

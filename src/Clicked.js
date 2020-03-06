@@ -22,10 +22,12 @@ class Clicked extends Component {
         let { isClicked } = this.state;
 
         return (
-                  //   A ternary decides what text to render depending on the action taken 
-            <h2 onClick={ this.handleClick }>
-                {isClicked ? "Clicked" : "Not Clicked"} 
-            </h2>
+        //   A ternary decides what text to render depending on the action taken 
+            <div style={{textAlign: "center", margin: 50,}}>
+                <h2 onClick={ this.handleClick }>
+                    {isClicked ? "Clicked" : "Not Clicked"} 
+                </h2>
+            </div>
 
         );
     }

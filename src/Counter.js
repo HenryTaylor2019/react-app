@@ -38,11 +38,21 @@ class Counter extends Component {
 
         return (
             <>
-                <button onClick={this.handleMinus}>-</button>
+            <div style={{
+                textAlign: "center"
+            }}>
+                <button onClick={this.handleMinus}
+                style={{
+                    textAlign: "center"
+                }}>-</button>
 
-                <button onClick={this.handlePlus}>+</button>
+                <button onClick={this.handlePlus}
+                style={{
+                    textAlign: "center"
+                }}>+</button>
 
-                <p>{ this.state.counter }</p>
+                <p >{ this.state.counter }</p>
+            </div>
             </>
         );
     }

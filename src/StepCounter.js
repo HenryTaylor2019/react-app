@@ -41,10 +41,14 @@ class StepCounter extends Component {
     
         return(
             <>
-            <button onClick={this.handleMinus}>-</button>
-            <button onClick={this.handlePlus}>+</button>
+             <div style={{
+                textAlign: "center"
+            }}>
+                <button onClick={this.handleMinus}>-</button>
+                <button onClick={this.handlePlus}>+</button>
 
-            <p>{ this.state.counter }</p> 
+                <p>{ this.state.counter }</p> 
+            </div>
             </>  
         );
     }

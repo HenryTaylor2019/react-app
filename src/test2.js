@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
 
 <Router>
     <Link to=”/path-name>Path Name</link>

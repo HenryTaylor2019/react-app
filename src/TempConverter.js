@@ -30,21 +30,25 @@ class TempConverter extends Component {
         return (
             
             <>
-            <label htmlFor="celsius">Celsius</label>
-            <input 
-            placeholder="Enter Celsius"
-            name="celsius"
-            className="form-control"
-            value={ celsius }
-            onChange={this.handleChange} />
+            <div style={{textAlign: "center"}}>
+                <label htmlFor="celsius">Celsius</label>
+                <input 
+                placeholder="Enter Celsius"
+                name="celsius"
+                className="form-control"
+                value={ celsius }
+                onChange={this.handleChange} />
 
-            <label htmlFor="fahrenheit">Fahrenheit</label>
-            <input 
-            placeholder="Enter Fahrenheit"
-            name="fahrenheit"
-            className="form-control"
-            value={ fahrenheit }
-            onChange={this.handleChange} />
+                <label htmlFor="fahrenheit">Fahrenheit</label>
+                <input 
+                placeholder="Enter Fahrenheit"
+                name="fahrenheit"
+                className="form-control"
+                value={ fahrenheit }
+                onChange={this.handleChange} />
+
+                
+            </div>
             
             </>
         );

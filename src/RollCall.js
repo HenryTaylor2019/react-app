@@ -20,14 +20,15 @@ class RollCall extends Component {
 
         return (
             <>
+            <div style={{textAlign: "center"}}>
+                <button>
+                    Next
+                </button>
 
-            <button>
-                Next
-            </button>
-
-            <p>
-            { currentIndex }
-            </p>
+                <p>
+                { currentIndex }
+                </p>
+            </div>
 
             </>
         )

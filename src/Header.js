@@ -7,7 +7,10 @@ class Header extends Component {
         let { children } = this.props;
 
         return (
-            <header> 
+            <header style={{
+                textAlign: "center",
+                paddingBottom: 20,
+            }}> 
                 <h1 className="display-1">{children}</h1>
             </header>
         );

@@ -7,7 +7,9 @@ class Paragraph extends Component {
         let { children } = this.props;
 
         return (
-            <p>{children}</p>
+            <div style={{textAlign: "center"}}>
+                <p>{children}</p>
+            </div>
         );
     }
 
