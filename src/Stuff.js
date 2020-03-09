@@ -21,6 +21,7 @@ import PasswordStrength from './PasswordStrength.js';
 import TempConverter from './TempConverter.js';
 import List from './List.js';
 import CatchMeIfYouCan from './CatchMeIfYouCan.js';
+import Progress from './Progress.js';
 
 
 // This renders the components passed in on each components page
@@ -34,10 +35,13 @@ const Stuff = ({ square }) => (
               <Link to="/misc">Misc</Link>
             </li>
             <li className="nav-link">
-              <Link to="/square">Square</Link>
+              <Link to="/square/blue">Square</Link>
             </li>
             <li className="nav-link">
-              <Link to="/counters">Counters</Link>
+              <Link to="/counter">Counters</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/stepcounter/100/20">Step Counter</Link>
             </li>
             <li className="nav-link">
               <Link to="/converter">Converter</Link>
@@ -48,6 +52,9 @@ const Stuff = ({ square }) => (
             <li className="nav-link">
               <Link to="/list">List</Link>
             </li>
+            <li className="nav-link">
+              <Link to="/progress">Progress</Link>
+            </li>
           </ul>
           {/* NAVBAR END */}
 
@@ -56,6 +63,7 @@ const Stuff = ({ square }) => (
         textAlign: "center",
         }}>
       <Header>React App</Header>
+
       <Button variant="warning" href="../square/red"
       style={{marginBottom: 20,}}>
         Go to Red Square
@@ -82,9 +90,13 @@ const Stuff = ({ square }) => (
         </Route>
  
 
-        <Route path="/counters">
+        <Route path="/counter">
           <Counter initial = { 50 } max={ 100 }/>
-          <StepCounter max={ 100 } step={ 5 } />
+        </Route>
+
+        <Route path="/stepcounter">
+          {/* <StepCounter max={ 100 } step={ 5 } /> */}
+          <Route path="/stepcounter/:max/:step" render={ ({ match }) => ( <StepCounter max={ match.params.max } step={ match.params.step } />) } />
         </Route>
 
         <Route path="/converter">
@@ -98,6 +110,11 @@ const Stuff = ({ square }) => (
         <Route path="/list">
           <List />
         </Route>
+
+        <Route path="/progress">
+          <Progress now={0} />
+        </Route>
+
       
         <FourOhFour /> {/* 404 PAGE */}
       </Switch>

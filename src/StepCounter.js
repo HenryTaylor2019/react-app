@@ -18,7 +18,7 @@ class StepCounter extends Component {
         const current = this.state.counter // adding the state set above (0) to var current
         let { step } = this.props; //adding step props from stuff page to var { step }
         let { max } = this.props; //adding max props from stuff page to var { max }
-        let newCounter = current === max ? max : current + step; //adding the answer of this ternary to var newCounter
+        let newCounter = current === +max ? +max : current + +step; //adding the answer of this ternary to var newCounter
 
         this.setState({
             counter: newCounter //Updating the current state to the result of newCounter
@@ -28,7 +28,7 @@ class StepCounter extends Component {
     handleMinus() {
         const current = this.state.counter // adding the state set above (0) to var current
         let { step } = this.props; //adding step props from stuff page to var { step }
-        const newCounter = current === 0 ? 0 : current - step; //adding the answer of this ternary to var newCounter
+        const newCounter = current === 0 ? 0 : current - +step; //adding the answer of this ternary to var newCounter
 
         this.setState({
             counter: newCounter //Updating the current state to the result of newCounter
