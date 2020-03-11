@@ -13,15 +13,22 @@ import Paragraph from './Paragraph.js';
 import Square from './Square.js';
 import People from './People.js';
 import Clicked from './Clicked.js';
+import ClickedHook from './ClickedHook.js';
 import ToggleText from './ToggleText.js';
+import ToggleTextHook from './ToggleTextHook.js';
 import Counter from './Counter.js';
+import CounterHook from './CounterHook.js';
 import StepCounter from './StepCounter.js';
+import StepCounterHook from './StepCounterHook.js';
 import Length from './Length.js';
 import PasswordStrength from './PasswordStrength.js';
 import TempConverter from './TempConverter.js';
 import List from './List.js';
 import CatchMeIfYouCan from './CatchMeIfYouCan.js';
+import CatchMeIfYouCanHook from './CatchMeIfYouCanHook.js';
 import Progress from './Progress.js';
+import RollCall from './RollCall.js';
+import RollCallHook from './RollCallHook.js';
 
 
 // This renders the components passed in on each components page
@@ -55,6 +62,12 @@ const Stuff = ({ square }) => (
             <li className="nav-link">
               <Link to="/progress">Progress</Link>
             </li>
+            <li className="nav-link">
+              <Link to="/jump">Jump</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/rollcall">RollCall</Link>
+            </li>
           </ul>
           {/* NAVBAR END */}
 
@@ -74,28 +87,37 @@ const Stuff = ({ square }) => (
       <Switch>
         <Route exact path="/para" component={ Paragraph }/>
 
-        {/* <Route path="/square">
-          {square ? <Square color="pink" /> : null}
+        {/* <Route path="/squarehook">
+          {green ? <SquareHook color="pink" /> : null}
         </Route> */}
 
         <Route path="/square/:id" render={ ({ match }) => ( <Square square={ match.params.id } />) } />
+
 
         
         <Route path="/misc">
           <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
           <Clicked />
+          <ClickedHook />
           <ToggleText />
+          <ToggleTextHook initial={"Clicked"} alternate={"Not Clicked"}/>
           <Length />
+        </Route>
+
+
+        <Route path="/jump">
           <CatchMeIfYouCan jump={ 100 }/>
+          <CatchMeIfYouCanHook jump={ 100 }/>
         </Route>
  
 
         <Route path="/counter">
           <Counter initial = { 50 } max={ 100 }/>
+          <CounterHook initial = { 50 } max={ 100 }/>
         </Route>
 
         <Route path="/stepcounter">
-          {/* <StepCounter max={ 100 } step={ 5 } /> */}
+          <StepCounterHook max={ 100 } step={ 5 } />
           <Route path="/stepcounter/:max/:step" render={ ({ match }) => ( <StepCounter max={ match.params.max } step={ match.params.step } />) } />
         </Route>
 
@@ -113,6 +135,11 @@ const Stuff = ({ square }) => (
 
         <Route path="/progress">
           <Progress now={0} />
+        </Route>
+
+        <Route path="/rollcall">
+          <RollCall names={ ["Bar", "Rar", "Gar"] } />
+          <RollCallHook names={ ["Bar", "Rar", "Gar"] } />
         </Route>
 
       

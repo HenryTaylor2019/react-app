@@ -27,11 +27,11 @@ class CatchMeIfYouCan extends Component {
         return (
             <>
             <div style={{textAlign: "center"}}>
-                <h2>Jumping Button</h2>
+                <h2>Jumping Button Class</h2>
                 <button 
                 style={{marginTop : position,}} 
                 onClick={this.handleClick}
-                className="btn btn-primary mt-4">
+                >
                     Jump
                 </button>
             </div>

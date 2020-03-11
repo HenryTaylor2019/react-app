@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SquareHook from './SquareHook.js';
 
 class Square extends Component {
     constructor(props) {
@@ -37,7 +38,8 @@ class Square extends Component {
                     />
 
                 </div>
-                
+                <br />
+                <SquareHook colour="hotpink" />
             </>
         );
     }

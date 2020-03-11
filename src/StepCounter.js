@@ -44,6 +44,7 @@ class StepCounter extends Component {
              <div style={{
                 textAlign: "center"
             }}>
+                <h2>Step Counter Class</h2>
                 <button onClick={this.handleMinus}>-</button>
                 <button onClick={this.handlePlus}>+</button>
 
