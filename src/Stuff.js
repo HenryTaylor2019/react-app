@@ -11,13 +11,17 @@ import React from 'react';
 import Header from './Header.js';
 import Paragraph from './Paragraph.js';
 import Square from './Square.js';
+import SquareReducer from './SquareReducer.js';
 import People from './People.js';
 import Clicked from './Clicked.js';
 import ClickedHook from './ClickedHook.js';
+import ClickedReducer from './ClickedReducer.js';
 import ToggleText from './ToggleText.js';
 import ToggleTextHook from './ToggleTextHook.js';
+import ToggleTextReducer from './ToggleTextReducer.js';
 import Counter from './Counter.js';
 import CounterHook from './CounterHook.js';
+import CounterReducer from './CounterReducer.js';
 import StepCounter from './StepCounter.js';
 import StepCounterHook from './StepCounterHook.js';
 import Length from './Length.js';
@@ -68,6 +72,9 @@ const Stuff = ({ square }) => (
             <li className="nav-link">
               <Link to="/rollcall">RollCall</Link>
             </li>
+            <li className="nav-link">
+              <Link to="/squarereducer">Square Reduce</Link>
+            </li>
           </ul>
           {/* NAVBAR END */}
 
@@ -91,7 +98,12 @@ const Stuff = ({ square }) => (
           {green ? <SquareHook color="pink" /> : null}
         </Route> */}
 
+
         <Route path="/square/:id" render={ ({ match }) => ( <Square square={ match.params.id } />) } />
+
+        <Route path="/squarereducer">
+          <SquareReducer />
+        </Route>
 
 
         
@@ -99,8 +111,10 @@ const Stuff = ({ square }) => (
           <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
           <Clicked />
           <ClickedHook />
+          <ClickedReducer />
           <ToggleText />
           <ToggleTextHook initial={"Clicked"} alternate={"Not Clicked"}/>
+          <ToggleTextReducer initial={"Clicked"} alternate={"Not Clicked"}/>
           <Length />
         </Route>
 
@@ -114,6 +128,7 @@ const Stuff = ({ square }) => (
         <Route path="/counter">
           <Counter initial = { 50 } max={ 100 }/>
           <CounterHook initial = { 50 } max={ 100 }/>
+          <CounterReducer />
         </Route>
 
         <Route path="/stepcounter">
